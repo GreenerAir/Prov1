@@ -1,0 +1,13 @@
+*{
+    color:#ffffff;
+}
+footer{
+    background-color: #000000;
+    color:#ffffff;
+    opacity: 90%;
+    width: 100%;
+    height: 15px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+  }
