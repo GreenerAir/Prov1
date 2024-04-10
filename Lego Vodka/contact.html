@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es_ES">
+    <head>
+        <style>
+        .log_txt{
+            color: white;
+            left: 0;
+        }
+        #bntE, #btnB {
+            color:black;
+        }
+        h1 {
+            text-align: center;
+        }
+        </style>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="D:\MP04.Lenguaje de marcas y sisrtemas de gestión de la información\html.fc\Lego Vodka\css_pack.css">
+        <meta charset="utf-8">
+        <title> UtterEden contact | UtterEden </title>
+    </head>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+        <header>Menu</header>
+        <a href="D:\MP04.Lenguaje de marcas y sisrtemas de gestión de la información\html.fc\Lego Vodka\frnt.html" class="active">
+        <i class="fas fa-house"></i>
+        <span> Forum </span>
+        </a>
+        <a href="D:\MP04.Lenguaje de marcas y sisrtemas de gestión de la información\html.fc\Lego Vodka\exp.html">
+        <i class="fas fa-sliders"></i>
+        <span> #ServeTheNight </span>
+        </a>
+        <a href="D:\MP04.Lenguaje de marcas y sisrtemas de gestión de la información\html.fc\Lego Vodka\ComBox\Comboxfrtpg.html">
+         <i class="fas fa-wine-glass"></i>
+        <span> Bar </span>
+        </a>
+        <a href="D:\MP04.Lenguaje de marcas y sisrtemas de gestión de la información\html.fc\Lego Vodka\contact.html">
+         <i class="fas fa-user"></i>
+        <span> Contact </span>
+        </a>
+        </div>
+    </nav>
+    <body>
+        <div class="log_txt">
+            <h1>Register / Log In</h1>
+            <label for="SNombre">Nombre</label>
+            <input type="text" name="nombre" id="SNombre" size="20" autocomplete="on" required>
+            <br>
+            <br>
+            <label for="SEmail">Email</label>
+            <input type="email" name="email" id="SEmail" size="30" autocomplete="on" required>
+            <br>
+            <br>
+            <input type="password" name="contraseña" id="SContraseña" size="20" required>     
+            <label for="SContraseña">Contraseña</label>
+            <br>
+            <br>
+            <label for="SContraseña">Confirmar Contraseña</label>
+            <input type="password" name="contraseña2" id="SContraseña" size="20" >
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="enviar" id="btnE">
+        <input type="reset" value="borrar" id="btnB">
+        </div>
+        <hr>
+    </body>
+</html>
