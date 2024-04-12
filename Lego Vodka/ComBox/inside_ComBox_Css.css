@@ -1,0 +1,125 @@
+body{
+    color: #fff;
+    height: -30px;
+}
+.all {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "figtree", sans-serif;
+}
+.cards {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+.conteins {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 1em;
+    width: 900px;
+    height: 500px;
+    transition: all 400ms;
+}
+.conteins:hover.box {
+    filter: grayscale(100%), opacity(24%);
+}
+.conteins:hover.box:hover {
+    filter: grayscale(0%), opacity(100%);
+}
+.box {
+    top: 80px;
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteins:has(.pic1:hover) {
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic2:hover) {
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic3:hover) {
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic4:hover) {
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic5:hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic6:hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.conteins:has(.pic7:hover) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr ;
+    .box{
+        background: var(--img) center center;
+        background-size: cover;
+    }
+}
+.box:nth-child(odd) {
+    transform: translateY(-16px);
+}
+.box:nth-child(even) {
+    transform: translateY(16px);
+}
+.box::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+.box:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+footer{
+    bottom: 0;
+    position: relative;
+    background-color: #000000;
+    color:#ffffff;
+    opacity: 90%;
+    width: 100%;
+    height: 50px;
+    p{
+        text-align: center;
+    }
+}
