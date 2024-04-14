@@ -1,6 +1,6 @@
 body{
-    color: #fff;
-    height: -30px;
+    color: #ffffff;
+    height: -10px;
 }
 .all {
     margin: 0;
@@ -8,7 +8,7 @@ body{
     box-sizing: border-box;
     font-family: "figtree", sans-serif;
 }
-.cards {
+.opts {
     display: grid;
     place-content: center;
     min-height: 100vh;
@@ -16,9 +16,9 @@ body{
 .conteins {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
-    width: 900px;
+    width: 750px;
     height: 500px;
     transition: all 400ms;
 }
@@ -29,7 +29,7 @@ body{
     filter: grayscale(0%), opacity(100%);
 }
 .box {
-    top: 80px;
+    top: 60px;
     position: relative;
     background: var(--img) center center;
     background-size: cover;
@@ -38,43 +38,45 @@ body{
     justify-content: center;
     align-items: center;
 }
+.button-container a:link, a:visited {
+    background-color: #3f6767;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 6%; 
+    transform: translateY(-50%);
+    border-radius: 54px;
+}
+.button-container a:hover, a:active {
+    background-color: red;
+}
 .conteins:has(.pic1:hover) {
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 3fr 1fr 1fr 1fr ;
     .box{
         background: var(--img) center center;
         background-size: cover;
     }
 }
 .conteins:has(.pic2:hover) {
-    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 3fr 1fr 1fr ;
     .box{
         background: var(--img) center center;
         background-size: cover;
     }
 }
 .conteins:has(.pic3:hover) {
-    grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 3fr 1fr ;
     .box{
         background: var(--img) center center;
         background-size: cover;
     }
 }
 .conteins:has(.pic4:hover) {
-    grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr ;
-    .box{
-        background: var(--img) center center;
-        background-size: cover;
-    }
-}
-.conteins:has(.pic5:hover) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr ;
-    .box{
-        background: var(--img) center center;
-        background-size: cover;
-    }
-}
-.conteins:has(.pic6:hover) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr ;
+    grid-template-columns: 1fr 1fr 1fr 3fr ;
     .box{
         background: var(--img) center center;
         background-size: cover;
@@ -105,7 +107,6 @@ body{
     transition-delay: 400ms;
 }
 footer{
-    bottom: 0;
     position: relative;
     background-color: #000000;
     color:#ffffff;
