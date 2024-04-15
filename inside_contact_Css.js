@@ -23,28 +23,32 @@ const submitBtn = document.getElementById('submit');
 const validate = (e) => {
   e.preventDefault();
  
+  console.log('Name:', name.value);
+  console.log('Email:', email.value);
+  console.log('Message:', message.value);
+
   if (name.value.length < 3) {
-    errorElement.innerHTML = 'Your name should be at least 3 characters long.';
+    errorElement.innerHTML = 'Tu nombre al menos tiene más de 3  carácteres.';
     return false;
   } 
   
   if (!(email.value.includes('.') && (email.value.includes('@')))) {
-    errorElement.innerHTML = 'Please enter a valid email address.';
+    errorElement.innerHTML = 'Porfavor introduce un email valido.';
     return false;
   } 
 
   if (!emailIsValid(email.value)) {
-    errorElement.innerHTML = 'Please enter a valid email address.';
+    errorElement.innerHTML = 'Porfavor introduce un email valido.';
     return false;
   }
 
   if (message.value.length < 15) {
-    errorElement.innerHTML = 'Please write a longer message.';
+    errorElement.innerHTML = 'Porfavor escribe un mensaje más largo.';
     return false;
   }
 
   errorElement.innerHTML = '';
-  successMsg.innerHTML = 'Thank you! I will get back to you as soon as possible.'; 
+  successMsg.innerHTML = 'Gracias! Te responderemos lo antes posible.'; 
 
   e.preventDefault();
   setTimeout(function () {
@@ -52,12 +56,8 @@ const validate = (e) => {
     document.getElementById('contact-form').reset();
   }, 6000);
 
+  console.log('Ha sido enviado');
+
   return true;
 
 }
-
-const emailIsValid = email => {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-submitBtn.addEventListener('click', validate);

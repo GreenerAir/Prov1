@@ -6,3 +6,127 @@
     min-height: 100%;
     z-index: -1;
 }
+* {
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.welcome{
+    z-index: 20;
+    text-align: right;
+    position: absolute; 
+    top:140px;
+    right: 10px; 
+    background-color: #0000008e;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px; 
+}
+.logo {
+    width: 10rem;
+    padding: 1.5rem;
+} 
+.menu {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: 'row';
+    padding: 30px 30px;
+    gap: 15px;
+}
+.menu .card {
+    width: 30%;
+    height: 440px;
+    max-height: 430px;
+    border-radius: 9px;
+    background-color: rgb(49, 53, 53);
+    box-shadow: 0px 0px 5px #444;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+.card-img {
+    height: 40%;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+.card-content {
+    color: #ffffff;
+    flex-grow: 4;
+    padding: 10px;
+}
+.card-content a{
+    color: aquamarine;
+} 
+.card-content > div {
+    overflow-y: hidden;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.card-content >div:first-child {
+    height: 10%;
+    margin-bottom: 5px;
+} 
+.card-content >div:nth-child(2) {
+    height: 30%;
+    padding-top: 8px;
+}
+.card-content >div:nth-child(3) {
+    height: 38%;
+}
+.card-content >div:nth-child(4) {
+    height: 10%;
+    margin-bottom: 5px;
+}
+.card-content >div:nth-child(5) {
+    height: 30%;
+    padding-top: 8px;
+} 
+.card-content >div:nth-child(6) {
+    height: 30%;
+}
+.card-content >div:last-child {
+    height: 20%;
+}  
+.card1 .card-img {
+    background-image: url('https://i.pinimg.com/236x/54/00/7d/54007d13112d089cab720909a53d357c.jpg');
+}  
+.card2 .card-img {
+    background-image: url('https://i.pinimg.com/736x/44/1e/16/441e16033cc09476a323d9303923e62b.jpg');
+}
+.card3 .card-img {
+    background-image: url('https://i0.wp.com/allmusicspain.com/wp-content/uploads/2023/11/Duro-Festival-2024.jpg?fit=1080%2C608&ssl=1');
+}
+.card4 .card-img {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/47/024_SonarVillagebyEstrellaDamm_PublicoAmbiente_MartiniAriel_20220617.jpg');
+}  
+.card5 .card-img {
+    background-image: url('https://www.timejust.es/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-27-at-19.17.59.jpeg');
+}
+.card6 .card-img {
+    background-image: url('https://www.cruillabarcelona.com/wp-content/uploads/2022/07/2022-07-09-ESCENARI-1__41A1875_PhotoXaviTorrent-2-scaled.jpg');
+}
+.etiquette {
+    color: rgb(249, 248, 248);
+    padding: 3px 10px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 10px;
+} 
+.bcn {
+    background-color: rgb(89, 43, 114);
+}
+footer{
+    bottom: 0%;
+    position: relative;
+    background-color: #000000;
+    color:#ffffff;
+    opacity: 90%;
+    width: 100%;
+    height: 50px;
+    p{
+        text-align: center;
+    }
+}
