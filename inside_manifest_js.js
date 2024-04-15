@@ -18,7 +18,7 @@ $("#ageForm").submit(() => {
         return false;
     }
     // Acceso solo cuando se introduce +18
-        window.location.assign("file:///D:/MP04.Lenguaje%20de%20marcas%20y%20sisrtemas%20de%20gesti%C3%B3n%20de%20la%20informaci%C3%B3n/html.fc/Lego%20Vodka/frnt.html");  
+        window.location.assign("frnt.html");  
         event.preventDefault();
         return true;  
 });
