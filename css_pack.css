@@ -1,157 +1,174 @@
-*{
+* {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0;
   padding: 0;
 }
-  :root {
-    --accent-color: #f9e9e9;
-    --gradient-color: #f6f4fd;
-  }
-  body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(-45deg, #ffffff 0%, #efddfb 100%);
-  }
-  .sidebar{
-    position: fixed;
-    width: 240px;
-    top : 0;
-    left: -240px;
-    height: 100%;
-    background-image: linear-gradient(to right , #353128, #7F6F5A);
-    transition: all .5s ease;
-  }
-  .sidebar header{
-    font-size: 28px;
-    color: #ffffffff;
-    line-height: 70px;
-    text-align: center;
-    background-image: linear-gradient(to right , #353128, #7F6F5A);
-    user-select: none;
-    text-transform: capitalize;
-  }
-  .sidebar a{
-    display: block;
-    height: 65px;
-    width: 100%;
-    color: #ffffff;
-    line-height: 65px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    border-left: 5px solid transparent;
-    text-transform: capitalize;
-    transition: all .5s ease;
-    background-image: linear-gradient(to right , #353128, #7F6F5A);
-  }
-  a.active,a:hover{
-    border-left: 5px solid var(--accent-color);
-    color: #eaaf19;
-     background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
-  }
-  .sidebar a i{
-    font-size: 23px;
-    margin-right: 16px;
-  }
-  .sidebar a span{
-    letter-spacing: 1px;
-    text-transform: capitalize;
-  }
-  #check{
-    display: none;
-  }
-  label #btn,label #cancel{
-    z-index: 1;
-    position: absolute;
-    top : 0;
-    left: 5px;
-    cursor: pointer;
-    color: #000000;
-    border-radius: 5px;
-    margin: 15px 30px;
-    font-size: 29px;
-    background-color: #9D8161;
-    text-transform: lowercase;
-    box-shadow:inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5),
-      inset -7px -7px 10px 0px rgba(0,0,0,.1),
-     3.5px 3.5px 20px 0px rgba(0,0,0,.1),
-     2px 2px 5px 0px rgba(0,0,0,.1);
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
-    line-height: 45px;
-    transition: all .5s ease;
-  }
-  label #cancel{
-    opacity: 0;
-    visibility: hidden;
-  }
-  #check:checked ~ .sidebar{
-    z-index: 1;
+:root {
+  --accent-color: #f9e9e9;
+  --gradient-color: #f6f4fd;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #ffffff 0%, #efddfb 100%);
+}
+.sidebar {
+  position: fixed;
+  width: 240px;
+  top: 0;
+  left: -240px;
+  height: 100%;
+  background-image: linear-gradient(to right, #353128, #7f6f5a);
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: #ffffffff;
+  line-height: 70px;
+  text-align: center;
+  background-image: linear-gradient(to right, #353128, #7f6f5a);
+  user-select: none;
+  text-transform: capitalize;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: #ffffff;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-left: 5px solid transparent;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  background-image: linear-gradient(to right, #353128, #7f6f5a);
+}
+a.active,
+a:hover {
+  border-left: 5px solid var(--accent-color);
+  color: #eaaf19;
+  background: linear-gradient(
+    to left,
+    var(--accent-color),
+    var(--gradient-color)
+  );
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 5px;
+  margin: 15px 30px;
+  font-size: 29px;
+  background-color: #9d8161;
+  text-transform: lowercase;
+  box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    3.5px 3.5px 20px 0px rgba(0, 0, 0, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
     left: 0;
     top: 0;
+    z-index: 1;
+    margin: 100px 0;
   }
-  #check:checked ~ label #btn{
-    margin-left: 245px;
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-left: 23px;
     opacity: 0;
     visibility: hidden;
   }
-  #check:checked ~ label #cancel{
-    margin-left: 245px;
+  .sidebar a {
+    height: 70px;
+  }
+  .sidebar a i {
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span {
     opacity: 1;
     visibility: visible;
   }
-  @media(max-width : 860px){
-    .sidebar{
-      height: auto;
-      width: 70px;
-      left: 0;
-      top:0;
-      z-index: 1;
-      margin: 100px 0;
-    }
-    header,#btn,#cancel{
-      display: none;
-    }
-    span{
-      position: absolute;
-      margin-left: 23px;
-      opacity: 0;
-      visibility: hidden;
-    }
-    .sidebar a{
-      height: 70px;
-    }
-    .sidebar a i{
-      margin-left: -10px;
-    }
-    a:hover {
-      width: 200px;
-      background: inherit;
-    }
-    .sidebar a:hover span{
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  .sidebar a.active,.sidebar > a:hover {
-    --accent-color: #7F6F5A;
-    --gradient-color: #353128;
-  }
-  body{
-    background-image: url(https://i.pinimg.com/236x/d6/5d/89/d65d8999ac420ee6da759b92940d7b55.jpg);
-    background-repeat: repeat;
-  }
-  footer{
-    background-color: #000000;
-    color:#ffffff;
-    opacity: 90%;
-    width: 100%;
-    height: 15px;
-  }
+}
+.sidebar a.active,
+.sidebar > a:hover {
+  --accent-color: #7f6f5a;
+  --gradient-color: #353128;
+}
+body {
+  background-image: url(https://i.pinimg.com/236x/d6/5d/89/d65d8999ac420ee6da759b92940d7b55.jpg);
+  background-repeat: repeat;
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  opacity: 90%;
+  width: 100%;
+  height: 15px;
+}
+
+#mail {
+  text-decoration: none;
+  color:rgb(227, 174, 242);
+}
+
+#mail:hover {
+  --accent-color: none;
+}
